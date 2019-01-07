@@ -2,6 +2,7 @@ import React from 'react';
 import {
 StyleSheet,
  View,
+ Text
 } from 'react-native';
  
 export default class HomeScreen extends React.Component {
@@ -10,7 +11,9 @@ export default class HomeScreen extends React.Component {
  };
 render() {
    return (
-     <View style={styles.container}></View>
+     <View style={styles.container}>
+     <Text>Test</Text>
+     </View>
    );
  }
 }
