@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import ComponentView from './view';
 import { connect } from 'react-redux';
-import { addAdress } from '../../redux/actions/adress';
+import { removeAdress } from '../../redux/actions/adress';
 
 
 class ExampleScreen extends React.Component {
     static navigationOptions = {
         header: null,
     };
+
+
+    /**
+     * Switch language
+     * @param value
+     */
+    removeAdress(index) {
+        this.props.onRemoveAdress(this.props.adress, index);
+    }
+
 
     /**
      * Render Method
@@ -17,8 +27,6 @@ class ExampleScreen extends React.Component {
         return (ComponentView.bind(this))();
     }
 }
-
-
 
 
 /**
@@ -33,9 +41,7 @@ const mapDispatchToProps = (dispatch) => {
          * Save Profile Action Creator
          * @param drawerId
          */
-        getProfile: (data) => {
-            onAddAdress: (adress, adress_txt) => { dispatch(addAdress(adress, adress_txt)); }
-        }
+        onRemoveAdress: (adress, index) => { dispatch(removeAdress(adress, index)); }
     }
 };
 
@@ -47,13 +53,11 @@ const mapDispatchToProps = (dispatch) => {
  * @returns {{Object}}
  */
 const mapStateToProps = (state) => {
-    const {auth,user} = state;
+    const { auth, user } = state;
     return {
         adress: state.adress.adress
     };
 };
-
-
 
 
 

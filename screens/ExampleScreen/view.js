@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import { Text, View} from 'react-native';
+import { Text, View, TouchableOpacity} from 'react-native';
 
 
 /**
@@ -12,6 +12,9 @@ var view = function () {
 
         <View style={[styles.container]}>
            <Text>Test</Text>
+           <TouchableOpacity onPress={() => this.removeAdress(0)}>
+               <Text>Delete adress at index 0</Text>
+           </TouchableOpacity>
         </View>
     )
 }
