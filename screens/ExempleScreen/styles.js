@@ -1,6 +1,6 @@
 import React from 'react-native';
 import {Dimensions} from 'react-native';
-import {Colors} from '@core-styles';
+
 
 let deviceWidth = Dimensions.get('window').width;
 let deviceHeight = Dimensions.get('window').height;

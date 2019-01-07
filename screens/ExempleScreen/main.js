@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ComponentView from './view';
 
-export default class Main extends React.Component {
+class Main extends React.Component {
     static navigationOptions = {
         header: null,
     };
@@ -13,3 +14,5 @@ export default class Main extends React.Component {
         return (ComponentView.bind(this))();
     }
 }
+
+export default Main;
