@@ -8,7 +8,6 @@ import { Text, View} from 'react-native';
  * @returns {XML}
  */
 var view = function () {
-    const { drawer } = this.props;
     return (
 
         <View style={[styles.container]}>

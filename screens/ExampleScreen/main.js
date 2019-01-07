@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addAdress } from '../../redux/actions/adress';
 
 
-class Main extends React.Component {
+class ExampleScreen extends React.Component {
     static navigationOptions = {
         header: null,
     };
@@ -57,4 +57,4 @@ const mapStateToProps = (state) => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(ExampleScreen);
